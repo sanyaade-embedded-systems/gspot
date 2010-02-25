@@ -8,6 +8,9 @@
 #include <string>
 #include <iostream>
 
+#include <gtkmm.h>
+
 #include "appkey.h"
 #include <spotify/api.h>
 #include "spotify.h"
+#include "mainwin.h"

@@ -1,10 +1,10 @@
 CXX		?= g++
-OBJ		= main.o spotify.o
+OBJ		= main.o spotify.o mainwin.o
 OUT		= gspot
 PREFIX 	?= /usr/local
 
-CXXFLAGS	+=	`pkg-config --cflags libspotify` 
-LIBS		= 	`pkg-config --libs libspotify`
+CXXFLAGS	+=	`pkg-config --cflags libspotify gtkmm-2.4` 
+LIBS		= 	`pkg-config --libs libspotify gtkmm-2.4`
 
 all: $(OUT)
 

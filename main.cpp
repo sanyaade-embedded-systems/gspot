@@ -28,10 +28,14 @@ static void sigIgn(int signo)
 int
 main(int argc, char* argv[])
 {
+	Gtk::Main kit(argc, argv);
+
 	mainthread = pthread_self();
 	signal(SIGIO, &sigIgn);
 
+	CMainWin* mainw = new CMainWin();
 
+	/*
 	if(spotify->InitSession())
 		printf("valid session.\n");
 	else
@@ -40,8 +44,9 @@ main(int argc, char* argv[])
 	spotify->SetCredentials("user", "password");
 	spotify->Login();
 
-	sessionloop();
+	sessionloop();*/
 
+	delete mainw;
 	delete spotify;
 
 	return EXIT_SUCCESS;
